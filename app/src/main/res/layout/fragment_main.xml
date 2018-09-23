@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonCheckWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/check_weather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticClouds" />
+
+        <TextView
+            android:id="@+id/textViewReverseGeocoding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:minLines="2"
+            android:text="@string/temp_text"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticReverseGeocoding"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticReverseGeocoding" />
+
+        <TextView
+            android:id="@+id/textViewStaticCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/current_location"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewLon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:maxLines="4"
+            android:minLines="1"
+            android:text="@string/temp_text"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticLon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticLon"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticLon" />
+
+        <TextView
+            android:id="@+id/textViewStaticReverseGeocoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/reverse_geocoding"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticCurrentLocation"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticLatitude" />
+
+        <TextView
+            android:id="@+id/textViewStaticWeatherInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/weather_info"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticReverseGeocoding"
+            app:layout_constraintTop_toBottomOf="@+id/textViewReverseGeocoding" />
+
+        <TextView
+            android:id="@+id/textViewStaticWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="40"
+            android:minLines="1"
+            android:text="@string/weather"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticReverseGeocoding"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticWeatherInfo" />
+
+        <TextView
+            android:id="@+id/textViewWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticWeather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticWeather"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticWeather" />
+
+        <TextView
+            android:id="@+id/textViewStaticTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticWeather"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticWeather" />
+
+        <TextView
+            android:id="@+id/textViewTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticTemperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticTemperature"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticTemperature" />
+
+        <TextView
+            android:id="@+id/textViewStaticHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticTemperature"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticTemperature" />
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticHumidity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticHumidity"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticHumidity" />
+
+        <TextView
+            android:id="@+id/textViewStaticPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pressure"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticHumidity" />
+
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticPressure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticPressure"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticPressure" />
+
+        <TextView
+            android:id="@+id/textViewStaticWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_speed"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticPressure"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticPressure" />
+
+        <TextView
+            android:id="@+id/textViewWindSpeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticWindSpeed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticWindSpeed"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticWindSpeed" />
+
+        <TextView
+            android:id="@+id/textViewStaticWindCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_course"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticWindSpeed"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticWindSpeed" />
+
+        <TextView
+            android:id="@+id/textViewWindCourse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticWindCourse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticWindCourse"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticWindCourse" />
+
+        <TextView
+            android:id="@+id/textViewStaticClouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clouds"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticWindCourse"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticWindCourse" />
+
+        <TextView
+            android:id="@+id/textViewClouds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticClouds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticClouds"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticClouds" />
+
+        <TextView
+            android:id="@+id/textViewStaticLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latitude"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticLon"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticLon" />
+
+        <TextView
+            android:id="@+id/textViewLat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticLatitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStaticLatitude"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticLatitude" />
+
+        <TextView
+            android:id="@+id/textViewStaticLon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/longitude"
+            android:textColor="@color/textWeather"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewStaticCurrentLocation"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStaticCurrentLocation" />
+
+        <ProgressBar
+            android:id="@+id/progressBarWeatherInfo"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStaticClouds"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPressure"
+            app:layout_constraintTop_toTopOf="@+id/textViewStaticWeather" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
